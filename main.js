@@ -133,104 +133,19 @@ function press() {
         //    }
         //killClones()
 }
-function buyChic() {
-    if (money >= chicPrice.innerHTML) {
-        money -= chicPrice.innerHTML
+function buyItem(price, own) {
+    if (money >= price.innerHTML) {
+        money -= price.innerHTML
         updateMoney()
         buildingsOwn += 1
-        chicOwn.innerHTML = Number(eval(chicOwn.innerHTML+"+1"));
-        chicOwn.innerHTML = chicOwn.innerHTML
+        own.innerHTML = Number(eval(own.innerHTML+"+1"));
+        own.innerHTML = own.innerHTML
         MpS.innerHTML = eval(MpS.innerHTML+"+1")
-        chicPrice.innerHTML = Math.ceil(Number(chicPrice.innerHTML)*1.25)
+        price.innerHTML = Math.ceil(Number(price.innerHTML)*1.25)
     } else {
         console.log("something went wrong")
     }
 }
-
-function buyGrain() {
-    if (money >= grainPrice.innerHTML) {
-        money -= grainPrice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        grainOwn.innerHTML = Number(eval(grainOwn.innerHTML+"+1"));
-        grainOwn.innerHTML = grainOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+5")
-        grainPrice.innerHTML = Math.ceil(Number(grainPrice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
-function buyMilk() {
-    if (money >= milkPrice.innerHTML) {
-        money -= milkPrice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        milkOwn.innerHTML = Number(eval(milkOwn.innerHTML+"+1"));
-        milkOwn.innerHTML = milkOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+10")
-        milkPrice.innerHTML = Math.ceil(Number(milkPrice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
-function buyRice() {
-    if (money >= ricePrice.innerHTML) {
-        money -= ricePrice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        riceOwn.innerHTML = Number(eval(riceOwn.innerHTML+"+1"));
-        riceOwn.innerHTML = riceOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+15")
-        ricePrice.innerHTML = Math.ceil(Number(ricePrice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
-function buyTomato() {
-    if (money >= tomatoPrice.innerHTML) {
-        money -= tomatoPrice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        tomatoOwn.innerHTML = Number(eval(tomatoOwn.innerHTML+"+1"));
-        tomatoOwn.innerHTML = tomatoOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+30")
-        tomatoPrice.innerHTML = Math.ceil(Number(tomatoPrice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
-function buyRas() {
-    if (money >= rasPrice.innerHTML) {
-        money -= rasPrice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        rasOwn.innerHTML = Number(eval(rasOwn.innerHTML+"+1"));
-        rasOwn.innerHTML = rasOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+50")
-        rasPrice.innerHTML = Math.ceil(Number(rasPrice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
-function buyPeach() {
-    if (money >= peachPice.innerHTML) {
-        money -= peachPice.innerHTML
-        updateMoney()
-        buildingsOwn += 1
-        peachOwn.innerHTML = Number(eval(peachOwn.innerHTML+"+1"));
-        peachOwn.innerHTML = peachOwn.innerHTML
-        MpS.innerHTML = eval(MpS.innerHTML+"+100")
-        peachPice.innerHTML = Math.ceil(Number(peachPice.innerHTML)*1.25)
-    } else {
-        console.log("something went wrong")
-    }
-}
-
 function upp() {
     if (money >= upgradeCost.innerHTML && document.getElementById("click-me").src == "https://pi-3-14159265.github.io/Farm/grain-click.png") {
         money -= Number(upgradeCost.innerHTML)
